@@ -1,0 +1,12 @@
+{
+    "name": "ediaimoborges/demo-crowler",
+    "authors": [
+        {
+            "name": "edyonil",
+            "email": "edyonil@gmail.com"
+        }
+    ],
+    "require": {
+        "paquettg/php-html-parser": "^1.7"
+    }
+}
