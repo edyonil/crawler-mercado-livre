@@ -27,6 +27,12 @@ class Crawler
             $price = $item->find('.price__fraction')[0]->text;
             
             $decimal = $item->find('.price__decimals')[0];
+
+            $brand = $item->find('.item__brand')[0];
+
+            if (!is_null($brand)) {
+                $brand = $brand->text;
+            }
         
             if (is_null($decimal)) {
                 $decimal = "00";
@@ -37,14 +43,14 @@ class Crawler
             $mountValue = trim($price) . ',' . $decimal;
         
             $sold = $item->find('.item__condition')[0]->text;
-        
-        
+
             $documennt[] = [
                 'img' => $img,
                 'title' => trim($title->text),
                 'link' => $a->getAttribute('href'),
                 'price' => $mountValue,
-                'sold' => trim($sold)
+                'sold' => trim($sold),
+                'brand' => $brand
             ];
         }
 

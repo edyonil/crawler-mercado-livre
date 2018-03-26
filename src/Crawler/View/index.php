@@ -213,7 +213,7 @@
                     </div>
                     <div class="item-body">
                         <h4><?php echo $i['title'] ;?></h4>
-                        <p>por Saraiva</p>
+                        <p><?php echo $i['brand'] ;?></p>
                         <div class="item-price">R$<?php echo $i['price'] ;?></div>
                         <div class="item-sold"><?php echo $i['sold'] ;?></div>
                     </div>
