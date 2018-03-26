@@ -38,39 +38,34 @@ foreach($itens as $item) {
     <title>Title of the document</title>
 
     <style>
-        body {
-            background-color: azure;
+        * {
+            margin: 0;
+            padding: 0;
+        },
+        .title {
+            height: 50px;
+            background-color: ;
         }
-        div.center {
-            padding: 20px;
-        }
-        ul {
-            list-style: none;
-        }
-        li {
-            width: 400px;
-            box-shadow: 0 0 30px #CCC;
-            background-color: #FFF;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px 15px;
-            display: inline-block;
-        }
+
     </style>
 </head>
 
 <body>
     <div class="center">
-        <h1>Lista de produtos do mercado livre</h1>
+        <h1>Mercado Livre Live</h1>
 
-        <ul>
+        <div class="list-product">
             <?php foreach($documennt as $d) :?>
-                <li>
-                    <h4><?php echo trim($d['title']) ;?></h4>
+            <div class="item">
+                <div class="media">
                     <img src="<?php echo $d['img'] ;?>" />
-                </li>
+                </div>
+                <div class="content">
+                    <h4><?php echo trim($d['title']) ;?></h4>
+                </div>
+            </div>
             <?php endforeach; ?>
-        </ul>
+        </div>
     </div>
 </body>
 
