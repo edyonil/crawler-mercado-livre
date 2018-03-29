@@ -9,11 +9,17 @@ class Crawler
     public function execute($category = 'celulares')
     {
         $dom = new Dom;
-        $dom->loadFromUrl("https://{$category}.mercadolivre.com.br/");
+
+        $simbolic = str_replace("", "-", $category);
+
+        $linkUrl = "https://lista.mercadolivre.com.br/{$simbolic}#D[A:{$category}]";
+
+        $dom->loadFromUrl($linkUrl);
         
         $itens = $dom->find('.results-item');
         
         $documennt = [];
+
         foreach($itens as $item) {
         
             $img = $item->find('img')[0];
@@ -41,8 +47,12 @@ class Crawler
             }
         
             $mountValue = trim($price) . ',' . $decimal;
-        
-            $sold = $item->find('.item__condition')[0]->text;
+
+            $sold = null;
+
+            if (!is_null($sold = $item->find('.item__condition')[0])) {
+                $sold = $sold->text;
+            };
 
             $documennt[] = [
                 'img' => $img,
