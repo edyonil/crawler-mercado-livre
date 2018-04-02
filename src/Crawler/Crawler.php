@@ -10,7 +10,7 @@ class Crawler
     {
         $dom = new Dom;
 
-        $simbolic = str_replace("", "-", $category);
+        $simbolic = strtolower(str_replace("", "-", $category));
 
         $linkUrl = "https://lista.mercadolivre.com.br/{$simbolic}#D[A:{$category}]";
 
