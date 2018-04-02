@@ -185,7 +185,7 @@
             color: #FFF;
         }
         .loading-list {
-            background: url("/assets/list-li.png") 30px 0px #FFF repeat-y;
+            background: url("assets/list-li.png") 30px 0px #FFF repeat-y;
             padding-left: 50px;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
@@ -200,7 +200,7 @@
         }
         .loading-list ul li {
             display: block;
-            background: url("/assets/list.png") center left no-repeat;
+            background: url("assets/list.png") center left no-repeat;
             padding: 20px 0 20px 25px;
         }
     </style>
@@ -220,7 +220,7 @@
         <div class="busca">
             <input class="search" name="search" placeholder="Procure pelo seu produto"/>
             <button id="request">
-                <img src="/assets/search.png"/>
+                <img src="assets/search.png"/>
             </button>
         </div>
     </div>
@@ -233,7 +233,7 @@
             <div class="loading-list-box">
                 <div class="header">
                     <h3>Aguarde</h3>
-                    <img class="loading-gif" src="/assets/loading.gif" />
+                    <img class="loading-gif" src="assets/loading.gif" />
                 </div>
                 <div class="loading-list">
                     <ul>
